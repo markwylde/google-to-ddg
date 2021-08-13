@@ -12,3 +12,19 @@ I frequently get CAPTCHA's on Google, and as I refuse to solve them, it means I 
 
 This extension puts links to some better search engines at the top of the Google CAPTCHA page.
 
+## How to install?
+Google has made it very hard to install extensions that are not in their proprietary Chrome Store.
+
+1. So you need to [download](https://github.com/markwylde/google-to-ddg/archive/refs/heads/master.zip) this project and extract it into a folder somewhere on your computer.
+
+2. Then in your browser, goto `chrome://extensions/`.
+
+3. Click "Developer Mode" to enable it
+
+4. Click "Load unpacked".
+
+5. Navigate to the directly you unzipped this project into
+
+Done! Now anytime Google decides to show you a CAPTCHA, you can select a better search engine to go to
+
+Of course, if you really just need a Google search, the CAPTCHA will work as normal.
