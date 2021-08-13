@@ -4,8 +4,8 @@ if (document.body.innerText.indexOf("Our systems have detected unusual traffic")
   const query = url.searchParams.get('q');
 
   const dom = document.createElement('div')
+  dom.style.maxWidth = '400px';
   dom.innerHTML = `
-    <hr />
     <b>Google's being awful again:</b>
     <p>Try one of these better search engines:</p>
 
@@ -23,6 +23,10 @@ if (document.body.innerText.indexOf("Our systems have detected unusual traffic")
         <a href="https://search.brave.com/search?q=${query}">Brave</a>
       </li>
     </ul>
+
+    <p>
+      Or, if you really need to, you can still solve the captcha below.
+    </p>
   `
 
   document.body.prepend(dom);
