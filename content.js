@@ -1,0 +1,29 @@
+if (document.body.innerText.indexOf("Our systems have detected unusual traffic") !=-1) {
+  const currentUrl = new URL(document.location.href)
+  const url = new URL(currentUrl.searchParams.get('continue'))
+  const query = url.searchParams.get('q');
+
+  const dom = document.createElement('div')
+  dom.innerHTML = `
+    <hr />
+    <b>Google's being awful again:</b>
+    <p>Try one of these better search engines:</p>
+
+    <ul>
+      <li>
+        <a href="https://duckduckgo.com/?q=${query}">DuckDuckGo</a>
+      </li>
+      <li>
+        <a href="https://startpage.com/do/metasearch.pl?query=${query}">StartPage</a>
+      </li>
+      <li>
+        <a href="https://www.bing.com/search?q=${query}">Bing</a>
+      </li>
+      <li>
+        <a href="https://search.brave.com/search?q=${query}">Brave</a>
+      </li>
+    </ul>
+  `
+
+  document.body.prepend(dom);
+}
